@@ -52,20 +52,24 @@
         </script>
         
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<!-- for LaTeX equations 暫時不用
+<!-- 啟用 LaTeX equations 編輯 -->
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -86,7 +90,7 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
--->
+
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -97,6 +101,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -116,14 +125,14 @@ init_mathjax();
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>CMSiMDE 網際內容管理系統</h1>
+                <h1>cdbw12-2分組網站</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">CMSiMDE 網際內容管理系統</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cdbw12-2分組網站</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -136,7 +145,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a></li>
+                     <li><a href='About.html'>About</a><li><a href='40723201.html'>40723201</a><li><a href='40723206.html'>40723206</a><li><a href='40723222.html'>40723222</a><li><a href='40723244.html'>40723244</a><li><a href='40723203.html'>40723203</a><li><a href='40723207.html'>40723207</a><li><a href='40723250.html'>40723250</a><li><a href='40623251.html'>40623251</a></li>
                       </ul>
                 </nav>
               </div>
@@ -147,18 +156,15 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content"> <a href='40723201.html'>Next</a> >> 40723201<br /><h1>About</h1>
+<p>組員:</p>
+<p>group:1</p>
+<p><span>Repository: </span><a href="https://github.com/s40723201/cd2020">40723201</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723201.github.io/cd2020">40723201</a><br/><span>Repository: </span><a href="https://github.com/s40723206/cd2020">40723206</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723206.github.io/cd2020">40723206</a><br/>----<br/>group:2</p>
+<p><span>Repository: </span><a href="https://github.com/s40723222/cd2020">40723222</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723222.github.io/cd2020">40723222</a><br/><span>Repository: </span><a href="https://github.com/s40723244/cd2020">40723244</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723244.github.io/cd2020">40723244</a><br/>----<br/>group:3</p>
+<p><span>Repository: </span><a href="https://github.com/s40723203/cd2020">40723203</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723203.github.io/cd2020">40723203</a><br/><span>Repository: </span><a href="https://github.com/s40723207/cd2020">40723207</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723207.github.io/cd2020">40723207</a><br/>----<br/>group:4</p>
+<p><span>Repository: </span><a href="https://github.com/s40723250/cd2020">40723250</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723250.github.io/cd2020">40723250</a><br/><span>Repository: </span><a href="https://github.com/40623251/cd2020">40623251</a><span><span> </span>| Site:<span> </span></span><a href="https://40623251.github.io/cd2020">40623251</a></p>
+<p>倉儲:<a href="https://github.com/s40723207/cdbw12-2">https://github.com/s40723207/cdbw12-2</a></p>
+<br /> <a href='40723201.html'>Next</a> >> 40723201</div>
         
     <!-- footer -->
       <div class="container">
